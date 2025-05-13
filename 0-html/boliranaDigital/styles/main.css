@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "FuenteUno";
+  src: url(../assets/fonts/AE01014D.TTF) format("truetype");
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 10px 30px;
+}
+
+body {
+  background-image: url("../assets/images/fondo.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del viewport */
+  background-repeat: no-repeat; /* No repite la imagen */
+  background-position: center; /* Centra la imagen */
+}
+
+header {
+    height: 100dvh;
+}
+
+h1 {
+  margin-bottom: 0;
+  color: #00b050;
+  text-align: center;
+  font-family: "FuenteUno", sans-serif;
+  font-size: 100px;
+}
+
+h2 {
+  margin-top: 0;
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  font-family: "FuenteUno", sans-serif;
+  font-size: 25px;
+}
+
+li a:hover {
+  color: #009442;
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
