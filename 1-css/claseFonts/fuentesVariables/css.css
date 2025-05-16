@@ -1,0 +1,9 @@
+h1{
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 300;
+}
+
+h1:hover{
+    font-weight: 700;
+    transition: font-weight 0.3s;
+}

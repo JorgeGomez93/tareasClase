@@ -1,0 +1,25 @@
+body{
+    background-color: gray;
+}
+
+.sombra-basica{
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+   /*offset-x | offset-y | radio de difuminado | color*/
+
+}
+
+.texto-relieve{
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #000000;
+    /*Efecto de texto en relieve*/
+}
+
+.resplandor{
+    color: #ffffff;
+    text-shadow: 0 0 10px #00aaff;
+}
+
+.multiples-sombras{
+    text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px darkblue;
+    /*Multiples sombras separadas por comas*/
+}

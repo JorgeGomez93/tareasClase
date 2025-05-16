@@ -8,46 +8,140 @@
     <meta name="robots" content="index,follow" />
     <title>TuBoliranaDigital</title>
     <link rel="shortcut icon" href="assets/icon/rana.png" />
+    <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <!--EL CONTENIDO DE LA PÁGINA-->
   <body>
     <!--CABECERA Y NAVEGACION-->
-    <header>
-      <div class="top-bar">
-          <img
-            src="assets/images/logo.webp"
-            width="100"
-            height="150"
-            alt="logo de bolirana"
-          />
-
+    <header class="encabezado-video">
+      <!--Video de fondo-->
+      <video autoplay muted loop playsinline>
+        <source src="assets/video/Frogs.webm" type="video/webm" />
+        Tu navegador no soporta la etiqueta de video
+      </video>
+      <div class="encabezado">
+        <div class="logo">
+          <a href="#"
+            ><img src="assets/icon/logofinal.webp" alt="logo de bolirana"
+          /></a>
+        </div>
+        <div class="top-bar">
           <nav>
             <ul>
               <!--MENU DE NAVEGACION-->
               <li><a href="#">INICIO</a></li>
               <li><a href="registro.html" target="_blank">ACCESO</a></li>
               <li><a href="#">JUGAR</a></li>
-              <li><a href="#">TUTORIAL</a></li>
+              <li><a href="#tutorial">TUTORIAL</a></li>
               <li><a href="#">RANKING</a></li>
               <li><a href="#">FORO</a></li>
-              <li><a href="#">CONTACTO</a></li>
+              <li><a href="#footer-container">CONTACTO</a></li>
             </ul>
           </nav>
+        </div>
       </div>
-      <div>
-        <h1>BOLIRANA</h1>
-        <h2>¿Listo para desafiar a tus amigos?</h2>
+      <div class="titulo-principal">
+        <h1>
+          <span class="tu">Tu</span><span class="bolirana">Bolirana</span
+          ><span class="digital">Digital</span>
+        </h1>
+        <h2>Suma o pierde… ¡con cada tiro!</h2>
       </div>
     </header>
 
     <main>
       <!--SECCIONES DEL CONTENIDO PRINCIPAL-->
+      <section class="tutorial" id="tutorial">
+        <h2>¿Cómo se juega?</h2>
+        <ol>
+          <li>Elige tu nombre y entra a la partida.</li>
+          <li>Cada jugador lanza 6 esferas metálicas al tablero.</li>
+          <li>Los hoyos en pareja otorgan la misma puntuación.</li>
+          <li>
+            La rampa tiene un hoyo de puntos altos y otro con ruleta de premio.
+          </li>
+          <li>Si fallas, se activa la ruleta de penalización.</li>
+          <li>
+            ¡Gana quien tenga mayor puntuación tras todos los lanzamientos!
+          </li>
+        </ol>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 TuBoliranaDigital. Todos los derechos reservados.</p>
+      <div class="footer-container" id="footer-container">
+        <div class="footer-brand">
+          <a href="#"
+            ><img
+              src="assets/icon/logofinal.webp"
+              alt="TuBoliranaDigital"/></a>
+              <!-- width="100px" -->
+          
+        </div>
+        <div class="footer-links">
+          <h4>Menú</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="registro.html" target="_blank">Acceso</a></li>
+            <li><a href="#">Jugar</a></li>
+            <li><a href="#tutorial">Tutorial</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Foro</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="assets/icon/WhatsApp.webp"
+                  alt="WhatsApp"
+                />Whatsapp</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="assets/icon/facebook.png"
+                  alt="Facebook"
+                />Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="assets/icon/Instagram.png"
+                  alt="Instagram"
+                />Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/icon/Youtube.png" alt="Youtube" />Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TuBoliranaDigital. Todos los derechos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>

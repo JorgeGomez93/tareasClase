@@ -1,0 +1,26 @@
+.truncado{
+    white-space: nowrap; /*Evita saltos de linea*/
+    overflow: hidden; /*Oculta el contenido que desborda*/
+    text-overflow: ellipsis; /*Muestra "..."*/
+    width: 200px; /*Ancho fijo para demostración*/
+}
+
+.conservar-formato{
+    white-space: pre; /*Mantiene espacios y saltos de linea*/
+}
+
+.sin-ajuste{
+    white-space: nowrap; /*Sin saltos de linea*/
+}
+
+.normal{
+    white-space: normal; /*Comportamiento predeterminado*/
+}
+
+.romper-todo{
+    word-break: break-all; /*rompe palabras en cualquier carácter*/
+}
+
+.ajustar-palabras{
+    word-wrap: break-word; /*Rompe palabras largas si es necesario*/
+}

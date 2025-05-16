@@ -1,0 +1,10 @@
+/* Variante para importar las fuentes desde una url directo en CSS y no HTML */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:ital@0;18display=swap');
+
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+h1, h2{
+    font-family: 'Playfair Display', serif;
+}

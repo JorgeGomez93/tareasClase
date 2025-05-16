@@ -1,0 +1,61 @@
+/* alineacion del texto */
+.izquierda {
+  text-align: left;
+}
+
+.derecha {
+  text-align: right;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.justificado {
+  text-align: justify;
+}
+
+.title-p {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+}
+
+/* interlineado del texto */
+p {
+  line-height: 1.5;
+}
+
+.compacto {
+  line-height: 1.2;
+}
+
+.espaciado {
+  line-height: 2;
+}
+
+.exacto {
+  line-height: 24px;
+}
+
+/* espaciado entre caracteres y palabras */
+
+h1 {
+  letter-spacing: 2px; /*espaciado amplio entre letras */
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+.condensado {
+  letter-spacing: -0.5px; /*letras mas justas*/
+}
+
+p {
+  word-spacing: 2px; /* mas espacio entre palabras */
+}
+
+.titulares{
+    word-spacing: 4px; /*gran separacion para titulares*/
+}

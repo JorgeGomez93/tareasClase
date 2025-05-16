@@ -1,20 +1,11 @@
-@font-face {
-  font-family: "FuenteUno";
-  src: url(../assets/fonts/AE01014D.TTF) format("truetype");
-}
-
-:root{
-  --color-primario: #00b050;
-}
-
 html {
   font-size: 10px;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("../assets/images/fondo.jpg");
-  color: white;
+  font-family: "Arial", Helvetica, sans-serif;
+  background-color: #1c1c1c;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   background-size: cover;
@@ -33,7 +24,7 @@ body {
 .form-container h1 {
   text-align: center;
   color: var(--color-primario);
-  font-family: "FuenteUno", sans-serif;
+  font-family: "FuenteDos", sans-serif;
   margin-bottom: 25px;
   font-size: 40px;
 }
