@@ -23,7 +23,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #1c1c1c;
-  color: #ffffff;
+  color: var(--color-secundario);
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -42,7 +42,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.15;
+    opacity: 0.4;
   }
 }
 
@@ -75,13 +75,14 @@ body {
   img {
     width: 80px;
     height: auto;
-    filter: drop-shadow(0 0 8px #00ff99);
+    filter: drop-shadow(0 0 8px var(--color-primario));
   }
 }
 
 /* Estilo del menú */
 .top-bar nav ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
   gap: 10px;
   list-style: none;
 }
@@ -90,8 +91,8 @@ body {
   text-decoration: none;
   font-family: "FuenteUno", sans-serif;
   font-size: 25px;
-  color: #cccccc; /* color plateado */
-  text-shadow: 0 0 5px #cccccc;
+  color: var(--color-secundario); /* color plateado */
+  text-shadow: 0 0 5px var(--color-secundario);
   transition: color 0.3s ease;
 }
 
@@ -107,7 +108,6 @@ header {
 
 /* Estilo del título */
 .titulo-principal {
-  /* padding-top: 180px; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -122,17 +122,14 @@ header {
   font-size: clamp(2.5rem, 6vw, 8rem); /*Función clamp CSS moderno*/
   /*min | preferido | max*/
   letter-spacing: 2px;
-}
-
-.titulo-principal span {
-  color: #00ff99;
+  color: var(--color-primario);
   text-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
 }
 
 .titulo-principal h2 {
   margin-top: 0;
-  color: #cccccc; /* color plateado */
-  text-shadow: 0 0 10px #cccccc;
+  color: var(--color-secundario); /* color plateado */
+  text-shadow: 0 0 10px var(--color-secundario);
   font-family: "FuenteDos", sans-serif;
   font-size: clamp(1.5rem, 3vw, 3rem);
   letter-spacing: 2px;
@@ -162,9 +159,13 @@ header {
   margin-bottom: 10px;
 }
 
+.margin-arriba{
+  padding-top: 100px;
+}
+
 footer {
   background-color: #121212;
-  color: #cccccc;
+  color: var(--color-secundario);
   padding: 40px 20px 10px;
   font-size: 1.4rem;
   border-top: 2px solid #00ff99; /* línea superior esmeralda */
@@ -186,7 +187,7 @@ footer {
   img {
     width: 100px;
     height: auto;
-    filter: drop-shadow(0 0 8px #00ff99);
+    filter: drop-shadow(0 0 8px var(--color-primario));
   }
 }
 
@@ -207,7 +208,7 @@ footer {
 .footer-links a,
 .footer-legal a,
 .footer-social a {
-  color: #cccccc;
+  color: var(--color-secundario);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -237,3 +238,4 @@ footer {
   font-size: 1.2rem;
   color: #888;
 }
+
