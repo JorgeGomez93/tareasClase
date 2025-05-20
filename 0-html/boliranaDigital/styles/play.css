@@ -1,18 +1,20 @@
+/* === ENCABEZADO PRINCIPAL (Contenedor) === */
 .encabezado-principal {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+  position: relative; /*Permite posicionar el fondo dentro */
+  height: 100vh; /*toma toda la altura del viewport*/
+  overflow: hidden; /*Oculta el contenido que se salga del contenedor*/
 }
 
+/* === FONDO DE LA PORTADA (imagen centrada) === */
 .fondo-principal {
-  position: absolute;
+  position: absolute; /*Se posiciona dentro del encabezado principal*/
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -1; /*Se coloca detras del contenido*/
 
-  display: flex;
+  display: flex; /*Usa flexbox para centrar la imagen*/
   justify-content: center; /* Centra horizontal */
   align-items: center; /* Centra vertical */
 
@@ -20,29 +22,24 @@
     width: 60%;
     height: 90%;
     border-radius: 10px;
-    border: 2px solid var(--color-primario); /* ✅ Igual que en ranking */
+    border: 2px solid var(--color-primario); /*Bordes redondeados*/
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3); /* ✅ Misma sombra */
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3); /*Brillo esmeralda suave*/
   }
 }
 
-/* Oculta toda la barra por defecto */
+/* === MENÚ OCULTO / BARRA DESPLEGABLE === */
 .encabezado {
   position: absolute;
-  top: -100px; /* fuera de pantalla */
+  top: -100px; /* Oculta el encabezado fuera de la vista */
   left: 0;
   width: 100%;
-  background-color: rgba(
-    28,
-    28,
-    28,
-    0.7
-  ); /* fondo oscuro semitransparente si quieres */
-  transition: top 0.4s ease;
-  z-index: 10;
+  background-color: rgba(28, 28, 28, 0.7); /* fondo oscuro translúcido */
+  transition: top 0.4s ease; /*Efecto suave al desplegar*/
+  z-index: 10; /*Encima del fondo*/
 }
 
-/* Zona sensible al hover para desplegar */
+/* === Efecto HOVER para mostrar la barra === */
 .encabezado:hover {
-  top: 0;
+  top: 0; /*Al pasar el mouse se muestra el menú*/
 }

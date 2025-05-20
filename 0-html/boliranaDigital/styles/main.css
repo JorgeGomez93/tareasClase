@@ -1,3 +1,4 @@
+/* === FUENTES PERZONALIZADAS === */
 @font-face {
   font-family: "FuenteUno";
   src: url(../assets/fonts/AE01014D.TTF) format("truetype");
@@ -7,7 +8,7 @@
   font-family: "FuenteDos";
   src: url(../assets/fonts/DS-DIGI.TTF);
 }
-
+/* === CONFIGURACIÓN GLOBAL === */
 html {
   font-size: 10px;
   box-sizing: border-box;
@@ -28,7 +29,7 @@ body {
   padding: 0;
   min-height: 100vh;
 }
-
+/* === VIDEO DE FONDO === */
 .encabezado-video {
   position: relative;
   height: 100vh;
@@ -45,7 +46,7 @@ body {
     opacity: 0.4;
   }
 }
-
+/* === ENCABEZADO Y NAVEGACIÓN=== */
 .encabezado,
 .titulo-principal {
   position: relative;
@@ -79,10 +80,10 @@ body {
   }
 }
 
-/* Estilo del menú */
+/* === MENÚ DE NAVEGACIÓN=== */
 .top-bar nav ul {
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: repeat(7, 1fr); /* Distribuye los ítems del menú */
   gap: 10px;
   list-style: none;
 }
@@ -101,12 +102,12 @@ body {
   text-shadow: 0 0 10px #ff6600;
 }
 
+/* === TÍTULO PRINCIPAL=== */
 header {
   height: 100dvh;
   position: relative;
 }
 
-/* Estilo del título */
 .titulo-principal {
   position: absolute;
   top: 50%;
@@ -134,7 +135,7 @@ header {
   font-size: clamp(1.5rem, 3vw, 3rem);
   letter-spacing: 2px;
 }
-
+/* === SECCIÓN TUTORIAL=== */
 .tutorial {
   max-width: 800px;
   margin: 50px auto;
@@ -159,10 +160,10 @@ header {
   margin-bottom: 10px;
 }
 
-.margin-arriba{
+.margin-arriba {
   padding-top: 100px;
 }
-
+/* === PIE DE PÁGINA === */
 footer {
   background-color: #121212;
   color: var(--color-secundario);
@@ -238,4 +239,3 @@ footer {
   font-size: 1.2rem;
   color: #888;
 }
-
