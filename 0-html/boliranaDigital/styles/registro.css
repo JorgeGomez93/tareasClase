@@ -8,7 +8,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.ventana-formulario{
+.ventana-formulario {
   padding-top: 120px;
 }
 
@@ -17,8 +17,9 @@ body {
   margin: 20px auto;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--color-primario);
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 176, 80, 0.6);
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
 }
 
 .form-container h1 {
@@ -67,4 +68,3 @@ form input[type="submit"] {
   margin-top: 25px;
   font-size: 20px;
 }
-

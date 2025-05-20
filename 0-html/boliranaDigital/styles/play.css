@@ -1,0 +1,48 @@
+.encabezado-principal {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fondo-principal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  display: flex;
+  justify-content: center; /* Centra horizontal */
+  align-items: center; /* Centra vertical */
+
+  img {
+    width: 60%;
+    height: 90%;
+    border-radius: 10px;
+    border: 2px solid var(--color-primario); /* ✅ Igual que en ranking */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3); /* ✅ Misma sombra */
+  }
+}
+
+/* Oculta toda la barra por defecto */
+.encabezado {
+  position: absolute;
+  top: -100px; /* fuera de pantalla */
+  left: 0;
+  width: 100%;
+  background-color: rgba(
+    28,
+    28,
+    28,
+    0.7
+  ); /* fondo oscuro semitransparente si quieres */
+  transition: top 0.4s ease;
+  z-index: 10;
+}
+
+/* Zona sensible al hover para desplegar */
+.encabezado:hover {
+  top: 0;
+}
