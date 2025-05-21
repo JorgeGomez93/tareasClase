@@ -1,0 +1,15 @@
+.contenedor {
+  display: grid;
+  /*grid-template-columns: 200px 200px 200px; 3 columnas de 200px */
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px 100px; /*2 filas de 100px*/
+  gap: 10px; /*Espacio entre celdas*/
+}
+
+.item {
+  background-color: #3498db;
+  border: 2px solid black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

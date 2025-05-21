@@ -1,0 +1,11 @@
+.contenedor{
+    display: inline-block;
+    border: 2px solid #333;
+}
+
+.item{
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #3498db;
+    color: white;
+}

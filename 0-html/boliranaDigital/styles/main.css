@@ -83,7 +83,7 @@ body {
 /* === MENÚ DE NAVEGACIÓN=== */
 .top-bar nav ul {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Distribuye los ítems del menú */
+  grid-template-columns: repeat(7,1fr); /* Distribuye los ítems del menú */
   gap: 10px;
   list-style: none;
 }
@@ -91,7 +91,9 @@ body {
 .top-bar nav a {
   text-decoration: none;
   font-family: "FuenteUno", sans-serif;
-  font-size: 25px;
+  /* font-size: 25px; */
+  font-size: 5rem;
+  font-size: clamp(1.15rem, 2vw, 5rem);
   color: var(--color-secundario); /* color plateado */
   text-shadow: 0 0 5px var(--color-secundario);
   transition: color 0.3s ease;
@@ -120,7 +122,7 @@ header {
 .titulo-principal h1 {
   font-family: "FuenteUno", sans-serif;
   margin-bottom: 0;
-  font-size: clamp(2.5rem, 6vw, 8rem); /*Función clamp CSS moderno*/
+  font-size: clamp(4.5rem, 6vw, 16rem); /*Función clamp CSS moderno*/
   /*min | preferido | max*/
   letter-spacing: 2px;
   color: var(--color-primario);
@@ -132,7 +134,7 @@ header {
   color: var(--color-secundario); /* color plateado */
   text-shadow: 0 0 10px var(--color-secundario);
   font-family: "FuenteDos", sans-serif;
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-size: clamp(1.8rem, 2.5vw, 6rem);
   letter-spacing: 2px;
 }
 /* === SECCIÓN TUTORIAL=== */
