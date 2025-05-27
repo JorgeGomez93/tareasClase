@@ -23,10 +23,66 @@
       mensaje = "Hola a todos";
 
       //Declaración y asignación juntas:
-      let mensaje1 = "hola a todos";
+      let mensaje1 = "hola a todos uno";
       let edad1 = 30,
-        nombre = "Juan",
+        nombre1 = "Juan",
         esEstudiante = true;
+
+      console.log(
+        "Nombre:",
+        nombre,
+        "edad:",
+        edad,
+        PI,
+        mensaje,
+        mensaje1,
+        edad1,
+        nombre1,
+        esEstudiante
+      );
+
+      //OBJETO
+      const persona = {
+        nombre: "Carlos",
+        edad: 28,
+        esEstudiante: false,
+      };
+
+      console.log(persona);
+      console.log(persona.nombre);
+      console.log(persona.edad);
+      console.log(persona.esEstudiante);
+
+      //LISTA
+      const colores = ["rojo", "verde", "azul"];
+
+      console.log(colores);
+      console.log(typeof colores[0]);
+      console.log(typeof colores);
+
+      //Conversión a string:
+      let num = 42;
+      let texto = String(num); //"42"
+      //o también
+      texto = num.toString(); //"42"
+
+      //conversión a Number:
+      let texto1 = "42";
+      let num1 = Number(texto); //42
+
+      //Métodos adicionales:
+      parseInt("42.5"); //42 (solo entero)
+      parseFloat("42.5"); //42.5 (incluye decimales)
+
+      //Conversión a Boolean:
+      Boolean(1); //true
+      Boolean(0); //false
+      Boolean(""); //false
+      Boolean("Hola"); //true
+
+      //Conversión automatica (coerción):
+      "5" + 2; //"52" (concatena como string)
+      "5" - 2; //3 (convierte y resta como número)
     </script>
   </body>
 </html>
