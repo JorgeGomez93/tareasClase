@@ -25,14 +25,29 @@
         <source src="assets/video/Frogs.webm" type="video/webm" />
         Tu navegador no soporta la etiqueta de video
       </video>
+
       <div class="encabezado">
-        <div class="logo">
-          <a href="#"
-            ><img src="assets/icon/logofinal.webp" alt="logo de bolirana"
-          /></a>
-        </div>
-        <div class="top-bar">
-          <nav aria-label="Menú principal">
+        <!--Contenedor de logo, top-bar y menú hamburguesa-->
+        <!-- Botón Hamburguesa -->
+        <input
+          type="checkbox"
+          id="toggle-menu"
+          class="toggle-menu"
+          aria-label="Abrir menú"
+        />
+        <label for="toggle-menu" class="menu-icon" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="barra-grid">
+          <div class="logo">
+            <a href="#"
+              ><img src="assets/icon/logofinal.webp" alt="logo de bolirana"
+            /></a>
+          </div>
+
+          <nav aria-label="Menú principal" class="top-bar">
             <ul class="menu">
               <!--MENU DE NAVEGACION-->
               <li><a href="#">INICIO</a></li>
@@ -143,5 +158,6 @@
         <p>&copy; 2025 TuBoliranaDigital. Todos los derechos reservados.</p>
       </div>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
