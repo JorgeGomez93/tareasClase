@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Mi Lista de Tareas</h1>
+    <input type="text" id="nuevaTarea" placeholder="Nueva tarea..." />
+    <button id="agregar">Agregar</button>
+    <ul id="listaTareas"></ul>
+
+    <table class="tabla-tareas">
+      <caption class="titulo-tabla">
+        Lista de Tareas Pendientes
+      </caption>
+      <thead>
+        <tr>
+          <th>Tarea</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="listaTareas">
+        <!-- Las tareas se agregarán aquí dinámicamente -->
+      </tbody>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>

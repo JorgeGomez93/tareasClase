@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora Avanzada</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculadora">
+      <input type="text" class="pantalla" id="pantalla" readonly placeholder="0" />
+      <div class="botones">
+        <button class="boton">C</button>
+        <button class="boton">⌫</button>
+        <button class="boton operador">/</button>
+        <button class="boton operador">×</button>
+        <button class="boton numero">7</button>
+        <button class="boton numero">8</button>
+        <button class="boton numero">9</button>
+        <button class="boton operador">-</button>
+        <button class="boton numero">4</button>
+        <button class="boton numero">5</button>
+        <button class="boton numero">6</button>
+        <button class="boton operador">+</button>
+        <button class="boton numero">1</button>
+        <button class="boton numero">2</button>
+        <button class="boton numero">3</button>
+        <button class="boton operador igual">=</button>
+
+        <button class="boton numero cero">0</button>
+        <button class="boton dot">.</button>
+      </div>
+      <div class="historial">
+        <h3>Historial</h3>
+        <ul id="historial"></ul>
+        <button>Limpiar Historial</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

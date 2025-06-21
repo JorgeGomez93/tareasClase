@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <div>
+        <h2>Mi galeria Dinámica</h2>
+      </div>
+      <div id="contenedor">
+        <label for="inputUrl">URL de la imagen:</label>
+        <input type="url" id="url-imagen" placeholder="URL de la imagen" />
+        <button id="botonAgregar">Agregar Imagen</button>
+        <label for="file-imagen">O selecciona una imagen:</label>
+        <input type="file" id="file-imagen" accept="image/*" />
+      </div>
+    </section>
+    <section class="galeria"></section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="form" method="post" novalidate>
+      <fieldset>
+        <legend>Agregar Empleados</legend>
+        <div class="form-group">
+          <label for="nombre">Nombre: </label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            id="nombre"
+            required
+            name="nombre"
+          />
+        </div>
+        <div class="form-group">
+          <label for="puesto">Puesto: </label>
+          <input
+            type="text"
+            placeholder="Puesto"
+            id="puesto"
+            required
+            name="puesto"
+          />
+        </div>
+        <div class="form-group">
+          <label for="salario">Salario: </label>
+          <input
+            type="number"
+            placeholder="Salario"
+            id="salario"
+            required
+            name="salario"
+          />
+        </div>
+        <div class="form-group checkbox">
+          <label for="isActivo">¿Está activo?</label>
+          <input type="checkbox" id="isActivo" name="isActivo" />
+        </div>
+        <div class="form-group button">
+          <input
+            type="submit"
+            name="addEmpleado"
+            id="addEmpleado"
+            value="Añadir Empleado"
+          />
+        </div>
+        <div class="form-group button">
+          <input
+            type="button"
+            name="showActiveEmployed"
+            id="showActiveEmployed"
+            value="Mostrar Empleados Activos"
+          />
+        </div>
+        <div class="form-group button">
+          <input
+            type="button"
+            name="totalNominas"
+            id="totalNominas"
+            value="Gasto Total Nominas"
+          />
+        </div>
+      </fieldset>
+    </form>
+
+    <form id="form1" method="post" novalidate>
+      <fieldset>
+        <legend>Busqueda de Empleado por Nombre</legend>
+        <div class="form-group">
+          <label for="nombre">Nombre: </label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            id="searchNombre"
+            required
+            name="searchNombre"
+          />
+        </div>
+        <div class="form-group button">
+          <input
+            type="button"
+            name="showEmployed"
+            id="showEmployed"
+            value="Buscar"
+          />
+        </div>
+      </fieldset>
+    </form>
+
+    <section class="searchEmployed"></section>
+
+    <section class="empleados-lista"></section>
+    <section class="gasto-nominas"></section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

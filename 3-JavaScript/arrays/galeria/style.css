@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  background-color: blueviolet;
+  width: 100dvw;
+  height: auto;
+}
+
+#contenedor {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 2fr auto;
+  place-items: center;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+#url-imagen {
+  width: 100%;
+}
+
+#botonBuscar {
+  height: 20px;
+  width: auto;
+  color: blueviolet;
+  background-color: greenyellow;
+  border: none;
+  border-radius: 5px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  place-items: center;
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.imagen {
+  position: relative;
+}
+
+.imagen button.eliminar {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.imagen {
+  width: 100%;
+  aspect-ratio: 3 / 5; /* Proporción fija */
+  overflow: hidden;
+}
+
+img {
+  display: block;
+}
+
+.imagen {
+  transition: opacity 0.3s ease;
+}
+.imagen.eliminada {
+  opacity: 0;
+}
+

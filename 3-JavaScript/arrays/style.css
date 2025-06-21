@@ -1,0 +1,70 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+
+}
+.form-group.button {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 8px;
+  grid-template-columns: none; /* evitar conflicto si lo hereda */
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="button"] {
+  padding: 0.5em 1em;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+label{
+    font-weight: bold;
+}
