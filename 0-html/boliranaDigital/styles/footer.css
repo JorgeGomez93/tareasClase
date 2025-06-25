@@ -1,0 +1,146 @@
+/* === PIE DE PÁGINA === */
+footer {
+  background-color: #121212;
+  color: var(--color-secundario);
+  padding: 4rem 2rem 10rem;
+  font-size: 1.4rem;
+  border-top: 0.2rem solid #00ff99; /* línea superior esmeralda */
+}
+
+.footer-up {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 10rem;
+    height: auto;
+    filter: drop-shadow(0 0 0.8rem var(--color-primario));
+  }
+}
+
+.footer-links ul,
+.footer-social ul,
+.footer-legal ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.footer-links li,
+.footer-social li,
+.footer-legal li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a,
+.footer-legal a,
+.footer-social a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-legal a:hover,
+.footer-social a:hover {
+  color: #ff6600; /* naranja de las patas de la rana */
+  text-shadow: 0 0 0.6rem #ff6600;
+}
+
+.footer-social img {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1rem;
+}
+
+.footer-social li a {
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 0.1rem solid #333;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Ocultar botones toggle y mostrar títulos en escritorio */
+.footer-toggle {
+  display: none;
+}
+
+/* Responsive (acordeón) */
+@media (max-width: 768px) {
+  .footer-up {
+    display: block;
+    padding: 2rem 1rem;
+  }
+
+  .footer-title {
+    display: none;
+  }
+
+  .footer-toggle {
+    display: flex;
+    background: none;
+    border: none;
+    color: var(--color-secundario);
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer-toggle .arrow {
+    font-size: 2rem; /* ajusta el tamaño si lo deseas */
+    transition: transform 0.3s ease;
+  }
+  .footer-brand img {
+    width: 6rem;
+  }
+  .footer-up h4 {
+    display: none;
+  }
+
+  .footer-bottom {
+    border-top: 0;
+  }
+  .footer-content {
+    overflow: hidden;
+    max-height: 0;
+    padding-left: 1rem;
+    font-weight: bold;
+    transition: max-height 0.4s ease;
+  }
+
+  .footer-content li {
+    padding-left: 1.5rem;
+  }
+
+  .footer-content.activo {
+    max-height: 500px; /* ajusta si alguna lista es más alta */
+  }
+
+  .footer-links a,
+  .footer-legal a,
+  .footer-social a {
+    color: #a5a1a1;
+  }
+}
+

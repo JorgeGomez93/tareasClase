@@ -1,5 +1,4 @@
 const btnCargar = document.getElementById("btnCargar");
-const apiKey = "280c7f9c6b89b74cf3b3785c7ace5b8e";
 
 btnCargar.addEventListener("click", () => {
   const ciudad = document.getElementById("ciudad").value;

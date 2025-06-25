@@ -28,18 +28,18 @@
   }
 }
 
-/* === MENÚ OCULTO / BARRA DESPLEGABLE === */
+/* === MENÚ OCULTO / BARRA DESPLEGABLE === 
 .encabezado {
   position: absolute;
-  top: -100px; /* Oculta el encabezado fuera de la vista */
+  /* top: -100px; Oculta el encabezado fuera de la vista 
   left: 0;
   width: 100%;
-  background-color: rgba(28, 28, 28, 0.7); /* fondo oscuro translúcido */
-  transition: top 0.4s ease; /*Efecto suave al desplegar*/
-  z-index: 10; /*Encima del fondo*/
+  background-color: rgba(28, 28, 28, 0.7); /* fondo oscuro translúcido 
+  transition: top 0.4s ease; /*Efecto suave al desplegar
+  z-index: 10; /*Encima del fondo
 }
 
-/* === Efecto HOVER para mostrar la barra === */
+/* === Efecto HOVER para mostrar la barra === 
 .encabezado:hover {
-  top: 0; /*Al pasar el mouse se muestra el menú*/
-}
+  top: 0; /*Al pasar el mouse se muestra el menú
+}*/
