@@ -1,0 +1,78 @@
+body {
+  font-family: "Arial", Helvetica, sans-serif;
+  background-color: #1c1c1c;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tablero-container {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tablero-container h1 {
+  font-size: 3rem;
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+
+.zona-juego {
+  width: 90%;
+  max-width: 1000px;
+  height: 500px;
+  border: 2px dashed var(--color-primario);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.zona-juego p {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.saludo-container {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.15);
+  transition: transform 0.3s ease;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.saludo-container:hover {
+  transform: scale(1.02);
+}
+
+
+.saludo-usuario {
+  font-size: 1.5rem;
+  color: #00ff99;
+}
+
+.avatar-container {
+  margin-top: 20px;
+}
+
+.avatar-img {
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid var(--color-primario);
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+.avatar-nombre {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}

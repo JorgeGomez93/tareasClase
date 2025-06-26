@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro | TuBoliranaDigital</title>
-    <link rel="shortcut icon" href="assets/icon/rana.webp" />
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/registro.css" />
+    <link rel="shortcut icon" href="../assets/icon/rana.webp" />
+    <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/registro.css" />
   </head>
   <body>
     <div id="navbar-container"></div>
@@ -16,11 +16,7 @@
     <main class="ventana-formulario" id="ventana-formulario">
       <section class="form-container">
         <h1>Registro</h1>
-        <form
-          action="/registrar-usuario"
-          method="post"
-          name="formulario-registro"
-        >
+        <form action="/registrar-usuario" name="formulario-registro">
           <!--Elementos del formulario-->
           <!-- <label for="name">Nombre:</label>
           <input
@@ -89,9 +85,33 @@
         </form>
       </section>
     </main>
+    <!-- Mensaje de sitio en construcción tipo pop-up -->
+    <div class="popup-construccion">
+      <div class="popup-contenido">
+        <h2>🚧 Sitio en construcción 🚧</h2>
+        <h2>¡Hola David! 👋</h2>
+        <p>
+          ¡Gracias por tu interés en formar parte de
+          <strong>TuBoliranaDigital</strong>!<br />
+          Esta sección de <strong>registro</strong> aún está en desarrollo y
+          pronto estará disponible.<br /><br />
+          <strong
+            >Mientras tanto, puedes volver a la página de juego e iniciar sesión
+            usando cualquier correo y contraseña.</strong
+          ><br />
+          <em
+            >Recuerda: esta es una versión beta, no necesitas estar registrado
+            para disfrutar del juego.</em
+          >
+        </p>
+        <button onclick="window.location.href='play.html'">
+          Volver a Jugar
+        </button>
+      </div>
+    </div>
     <footer>
       <div id="footer-container"></div>
     </footer>
-    <script src="script.js"></script>
+    <script src="../scripts/script.js"></script>
   </body>
 </html>

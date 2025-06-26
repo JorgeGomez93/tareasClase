@@ -1,0 +1,14 @@
+
+.Tarjeta img {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+}
+.Tarjeta h3 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+.Tarjeta p {
+  font-size: 1em;
+  color: #555;
+}

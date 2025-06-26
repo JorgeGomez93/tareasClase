@@ -28,18 +28,103 @@
   }
 }
 
-/* === MENÚ OCULTO / BARRA DESPLEGABLE === 
-.encabezado {
-  position: absolute;
-  /* top: -100px; Oculta el encabezado fuera de la vista 
-  left: 0;
-  width: 100%;
-  background-color: rgba(28, 28, 28, 0.7); /* fondo oscuro translúcido 
-  transition: top 0.4s ease; /*Efecto suave al desplegar
-  z-index: 10; /*Encima del fondo
+/*ESTILOS GENERALES DEL BODY*/
+body {
+  font-family: "Arial", Helvetica, sans-serif;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* === Efecto HOVER para mostrar la barra === 
-.encabezado:hover {
-  top: 0; /*Al pasar el mouse se muestra el menú
-}*/
+/*AJUSTE DEL CONTENEDOR PRINCIPAL*/
+.ventana-formulario {
+  padding-top: 120px;
+}
+
+/*ESTILO DEL FORMULARIO DE REGISTRO*/
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--color-primario);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+/*TÍTULO DEL FORMULARIO*/
+.form-container h1 {
+  text-align: center;
+  color: var(--color-primario);
+  font-family: "FuenteUno", sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  font-size: 40px;
+}
+
+/*ETIQUETAS DEL FORMULARIO*/
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/*CAMPOS DE ENTRADA*/
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box; /*Incluye el padding en el ancho total*/
+}
+
+/*BOTÓN ENVIAR (INTERACTIVO)*/
+form input[type="submit"]:hover {
+  background-color: #009442;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 176, 80, 0.5);
+}
+
+/*BOTÓN ENVIAR (BASE)*/
+form input[type="submit"] {
+  width: 100%;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+/* Botón secundario (crear cuenta, etc.) */
+form input[type="button"] {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-primario);
+  padding: 20px;
+  border: 2px solid var(--color-primario);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+form input[type="button"]:hover {
+  background-color: var(--color-primario);
+  color: white;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}

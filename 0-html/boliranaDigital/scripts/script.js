@@ -1,9 +1,17 @@
+function obtenerRuta(path) {
+  const estaEnPages = window.location.pathname.includes("/pages/");
+  return estaEnPages ? `../components/${path}` : `components/${path}`;
+}
+
 async function cargarNavbar() {
   try {
-    const response = await fetch("navbar.html");
+    const response = await fetch(obtenerRuta("navbar.html"));
+
     if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
     const html = await response.text();
-    document.getElementById("navbar-container").innerHTML = html;
+    const contenedor = document.getElementById("navbar-container");
+    contenedor.innerHTML = html;
+    ajustarRutasBase(contenedor);
   } catch (error) {
     console.error("Error al cargar navbar:", error.message);
   }
@@ -11,14 +19,42 @@ async function cargarNavbar() {
 
 async function cargarFooter() {
   try {
-    const response = await fetch("footer.html");
+    const response = await fetch(obtenerRuta("footer.html"));
+
     if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
     const html = await response.text();
-    document.getElementById("footer-container").innerHTML = html;
+    const contenedor = document.getElementById("footer-container");
+    contenedor.innerHTML = html;
+    ajustarRutasBase(contenedor);
     activarDesplegablesFooter();
   } catch (error) {
     console.error("Error al cargar footer:", error.message);
   }
+}
+
+function ajustarRutasBase(contenedor) {
+  const estaEnIndex =
+    window.location.pathname.endsWith("/index.html") ||
+    window.location.pathname === "/" ||
+    window.location.pathname === "/TuBoliranaDigital/";
+
+  if (!estaEnIndex) return;
+
+  // Corrige imágenes con ../
+  contenedor.querySelectorAll("img").forEach((img) => {
+    const src = img.getAttribute("src");
+    if (src?.startsWith("../")) {
+      img.setAttribute("src", src.replace("../", ""));
+    }
+  });
+
+  // Corrige enlaces con ../
+  contenedor.querySelectorAll("a").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (href?.startsWith("../")) {
+      a.setAttribute("href", href.replace("../", ""));
+    }
+  });
 }
 
 function activarDesplegablesFooter() {
@@ -49,7 +85,6 @@ function activarDesplegablesFooter() {
     });
   });
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarNavbar();
