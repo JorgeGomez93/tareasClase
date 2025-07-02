@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuración del Juego</title>
+    <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/config.css" />
+  </head>
+  <body>
+    <nav id="navbar-container"></nav>
+    <div id="overlay"></div>
+
+    <main class="pantalla-config navbar-offset">
+      <div>
+        <img
+          src="../assets/images/Principal.webp"
+          alt="Fondo principal"
+          class="fondo-juego"
+        />
+        <div class="configuracion">
+          <span class="titulo">2</span>
+        </div>
+        <div class="configuracion1">
+          <span class="valor">JUGADORES</span>
+        </div>
+        <!-- Opciones de configuración -->
+        <div class="opcion seleccionada" data-opcion="1">
+          <span class="titulo">BORRAR CHICOS</span>
+          <span class="valor">0 CHICOS JUGADOS</span>
+        </div>
+
+        <div class="opcion" data-opcion="2">
+          <span class="titulo">NÚMERO DE JUGADORES</span>
+          <span class="valor">2</span>
+        </div>
+
+        <div class="opcion" data-opcion="3">
+          <span class="titulo">PUNTAJE DEL CHICO</span>
+          <span class="valor">1000</span>
+        </div>
+
+        <div class="opcion" data-opcion="4">
+          <span class="titulo">POR PAREJAS</span>
+          <span class="valor">NO</span>
+        </div>
+
+        <div class="opcion" data-opcion="5">
+          <span class="titulo">CONFIGURAR MONONA</span>
+          <span class="valor">SIN MONONA</span>
+        </div>
+
+        <div class="opcion" data-opcion="6">
+          <span class="titulo">DESCUENTO DE BLANCO</span>
+          <span class="valor">-10</span>
+        </div>
+
+        <div class="boton-empezar">EMPEZAR JUEGO</div>
+      </div>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="../scripts/config.js"></script>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>

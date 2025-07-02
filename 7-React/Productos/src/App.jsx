@@ -1,10 +1,13 @@
 // src/App.jsx
 import "./App.css";
 import TarjetaProductos from "./TarjetaProductos";
+import tareas from "./assets/Tareas";
+import ListaTarea from "./components/ListaTarea";
 
 function App() {
   return (
     <div className="contenedor">
+      {/* <ListaTarea tareas={tareas} mostrarCompletadas={true}  /> */}
       <TarjetaProductos
         nombre="Silla"
         descripcion="Silla plástica como nueva"
@@ -22,6 +25,12 @@ function App() {
         descripcion="Carro con rines de lujo"
         precio={8000}
         imagen="/car.jpg"
+      />
+      <TarjetaProductos
+        nombre="Bicicleta"
+        descripcion="Bicicleta de montaña en buen estado"
+        precio={500}
+        imagen="/bike.jpg"
       />
     </div>
   );

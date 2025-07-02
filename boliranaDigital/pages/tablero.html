@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/tablero.css" />
-
   </head>
   <body>
     <div id="navbar-container"></div>
@@ -25,6 +24,27 @@
       <div id="footer-container"></div>
     </footer>
 
+    <!-- SDKs de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Configuración de Firebase -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAN4xecR1rr1TgO5BxzoBUV1NPO0ePTTE0",
+        authDomain: "tuboliranadigital.firebaseapp.com",
+        projectId: "tuboliranadigital",
+        storageBucket: "tuboliranadigital.appspot.com",
+        messagingSenderId: "358172959831",
+        appId: "1:358172959831:web:c55f79b0562433ad746f12",
+        measurementId: "G-HGST6KY652",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Tus scripts personalizados (después de Firebase) -->
     <script src="../scripts/script.js"></script>
     <script src="../scripts/tablero.js"></script>
   </body>

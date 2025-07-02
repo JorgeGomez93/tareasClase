@@ -1,0 +1,131 @@
+/*ESTILOS GENERALES DEL BODY*/
+body {
+  font-family: "Arial", Helvetica, sans-serif;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*AJUSTE DEL CONTENEDOR PRINCIPAL*/
+.ventana-formulario {
+  padding-top: 120px;
+}
+
+/*ESTILO DEL FORMULARIO DE REGISTRO*/
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--color-primario);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+/*TÍTULO DEL FORMULARIO*/
+.form-container h1 {
+  text-align: center;
+  color: var(--color-primario);
+  font-family: "FuenteUno", sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  font-size: 40px;
+}
+
+/*ETIQUETAS DEL FORMULARIO*/
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/*CAMPOS DE ENTRADA*/
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box; /*Incluye el padding en el ancho total*/
+}
+
+/*BOTÓN ENVIAR (INTERACTIVO)*/
+form input[type="submit"]:hover {
+  background-color: #009442;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 176, 80, 0.5);
+}
+
+/*BOTÓN ENVIAR (BASE)*/
+form input[type="submit"] {
+  width: 100%;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+p#o {
+  justify-content: center;
+  text-align: center;
+
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/* Botón secundario (crear cuenta, etc.) */
+form input[type="button"] {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-primario);
+  padding: 20px;
+  border: 2px solid var(--color-primario);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+form input[type="button"]:hover {
+  background-color: var(--color-primario);
+  color: white;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}
+
+/* Estilo para el ojito de las contraseñas */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 2.5rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-78%) scale(0.95);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  user-select: none;
+}

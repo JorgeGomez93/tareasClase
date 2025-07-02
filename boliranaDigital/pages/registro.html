@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/registro.css" />
+    <link rel="stylesheet" href="../styles/formularios.css" />
   </head>
   <body>
     <div id="navbar-container"></div>
@@ -55,13 +56,21 @@
           /> -->
 
           <label for="password">Contraseña:</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Contraseña"
-            required
-          />
+          <div class="password-wrapper">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Contraseña"
+              required
+            />
+            <img
+              class="toggle-password"
+              id="toggle-password"
+              src="../assets/icon/eye-open.jpg"
+              alt="Mostrar contraseña"
+            />
+          </div>
 
           <label for="password_confirm">Confirmar contraseña:</label>
           <input
@@ -82,36 +91,38 @@
           />
 
           <input type="submit" value="Registrarme" />
+          <p id="o">ó</p>
+          <input type="button" value="Iniciar sesión" id="btn-ir-login" />
         </form>
       </section>
     </main>
-    <!-- Mensaje de sitio en construcción tipo pop-up -->
-    <div class="popup-construccion">
-      <div class="popup-contenido">
-        <h2>🚧 Sitio en construcción 🚧</h2>
-        <h2>¡Hola David! 👋</h2>
-        <p>
-          ¡Gracias por tu interés en formar parte de
-          <strong>TuBoliranaDigital</strong>!<br />
-          Esta sección de <strong>registro</strong> aún está en desarrollo y
-          pronto estará disponible.<br /><br />
-          <strong
-            >Mientras tanto, puedes volver a la página de juego e iniciar sesión
-            usando cualquier correo y contraseña.</strong
-          ><br />
-          <em
-            >Recuerda: esta es una versión beta, no necesitas estar registrado
-            para disfrutar del juego.</em
-          >
-        </p>
-        <button onclick="window.location.href='play.html'">
-          Volver a Jugar
-        </button>
-      </div>
-    </div>
     <footer>
       <div id="footer-container"></div>
     </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Configuración del proyecto -->
+    <script>
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAN4xecR1rr1TgO5BxzoBUV1NPO0ePTTE0",
+        authDomain: "tuboliranadigital.firebaseapp.com",
+        projectId: "tuboliranadigital",
+        storageBucket: "tuboliranadigital.firebasestorage.app",
+        messagingSenderId: "358172959831",
+        appId: "1:358172959831:web:c55f79b0562433ad746f12",
+        measurementId: "G-HGST6KY052",
+      };
+
+      // Inicializar Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/auth.js"></script>
   </body>
 </html>
