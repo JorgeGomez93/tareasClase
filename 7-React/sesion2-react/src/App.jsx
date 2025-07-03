@@ -5,6 +5,9 @@ import PropsTarjetaSaludo from "./PropsTarjetaSaludo";
 import MostrarTexto from "./MostrarTexto";
 import BotonContador from "./BotonContador";
 import CambiarMensaje from "./CambiarMensaje";
+import FormNoControlado from "./FormNoControlado";
+import FormControlado from "./FormControlado";
+import SimpleForm from "./SimpleForm";
 function App() {
   return (
     <>
@@ -28,6 +31,17 @@ function App() {
       <div>
         <h2>Mi tercer ejercicio con react</h2>
         <CambiarMensaje />
+      </div>
+      <div>
+        <h2>Formulario con Onchange No controlado</h2>
+        <FormNoControlado />
+      </div>
+      <div>
+        <h2>Formulario con Onchange Controlado</h2>
+        <FormControlado />
+      </div>
+      <div>
+        <SimpleForm />
       </div>
     </>
   );
