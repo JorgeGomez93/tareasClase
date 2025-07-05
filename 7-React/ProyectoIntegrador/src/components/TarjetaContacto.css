@@ -1,0 +1,68 @@
+.tarjetaContacto {
+  position: relative;
+  width: 400px;
+  height: auto;
+  background-color: blanchedalmond;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.avatar img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 10px solid white;
+}
+
+.datos {
+  margin: 0;
+  padding: 0;
+  color: blueviolet;
+  text-align: end;
+  position: relative;
+}
+
+
+
+.datos h1 {
+  color: #222;
+  font-size: clamp(1.5rem, 2rem, 2.5rem);
+  position: relative;
+  z-index: 3;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+.datos p span {
+  font-weight: bold;
+}
+
+.titulo {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 179%;
+  height: 60px;
+  background-color: peachpuff;
+  z-index: 1;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
