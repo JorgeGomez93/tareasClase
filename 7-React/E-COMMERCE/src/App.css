@@ -1,0 +1,40 @@
+#top {
+  margin-top: 100px;
+  scroll-margin-top: 100px;
+}
+
+.NotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 2rem;
+  height: 100dvh;
+  margin-top: -50px;
+  #nombre {
+    font-weight: bold;
+    color: var(--hospital-green);
+  }
+  img {
+    height: 60%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-container {
+  flex: 1;
+  transition: margin-right 0.3s ease-in-out;
+  margin-bottom: 100px;
+}
+
+.contenido.con-aside .main-container {
+  margin-right: 40%;
+}
+
+.contenido.con-aside .product-detail {
+  width: 40%;
+}

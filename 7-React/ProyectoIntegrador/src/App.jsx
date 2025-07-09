@@ -1,5 +1,5 @@
-import TarjetaContacto from "./components/TarjetaContacto";
 import ListaContactos from "./components/ListaContactos";
+import Text from "./components/Text/Text";
 import "./App.css";
 
 function App() {
@@ -93,6 +93,7 @@ function App() {
       /> */}
       <div className="contenedorTarjetas">
         <ListaContactos contactos={contactos} soloActivos={true} />
+        <Text />
       </div>
     </>
   );
