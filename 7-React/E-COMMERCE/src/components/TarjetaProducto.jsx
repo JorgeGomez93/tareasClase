@@ -17,6 +17,19 @@ const TarjetaProducto = ({
   setClicado,
   setAgregarCarrito,
 }) => {
+  const producto = {
+    id,
+    nombre,
+    precio,
+    imagen,
+    categoria,
+    disponible,
+    descripcion,
+    marca,
+    stock,
+    valoracion,
+  };
+
   return (
     <div className="product-card" onClick={setClicado}>
       <img src={imagen} alt={nombre} />
@@ -32,7 +45,7 @@ const TarjetaProducto = ({
             alt="carrito"
             onClick={(e) => {
               e.stopPropagation(); // ✋ Evita que el clic llegue al contenedor
-              setAgregarCarrito((prev) => prev + 1);
+              setAgregarCarrito((prev) => [...prev, producto]);
             }}
           />
         </figure>

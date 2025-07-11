@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import DetalleDelProducto from "./components/DetalleDelProducto";
+import CarritoDeCompras from "./components/CarritoDeCompras";
 
 const productos = [
   {
@@ -330,7 +331,8 @@ const productos = [
 function App() {
   const [nombre, setNombre] = useState("");
   const [clicado, setClicado] = useState(null);
-  const [productosDelCarrito, setAgregarCarrito] = useState(0);
+  const [productosDelCarrito, setAgregarCarrito] = useState([]);
+  const [carritoVisible, setCarritoVisible] = useState(false);
 
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
 
@@ -348,37 +350,50 @@ function App() {
     return coincideTexto && coincideCategoria;
   });
 
+  const eliminarDelCarrito = (id) => {
+    setAgregarCarrito((prev) => prev.filter((p, index) => index !== id));
+  };
+
   return (
     <>
-      <div id="top">
-        <NavBar
-          setNombre={setNombre}
-          setCategoria={setCategoriaSeleccionada}
-          productosDelCarrito={productosDelCarrito}
-        />
+      <NavBar
+        setNombre={setNombre}
+        setCategoria={setCategoriaSeleccionada}
+        productosDelCarrito={productosDelCarrito}
+        setCarritoVisible={setCarritoVisible}
+        setClicado={setClicado}
+      />
 
-        {productosFiltrados.length === 0 ? (
-          <p className="NotFound">
-            <img src="/notFound.png" alt="NotFound" />
-            Lo sentimos, no hemos podido encontrar ningún resultado de{" "}
-            <span id="nombre">{nombre}</span>
-          </p>
-        ) : (
-          <div className={`contenido ${clicado ? "con-aside" : ""}`}>
-            <ListaProductos
-              productos={productosFiltrados}
-              setClicado={setClicado}
-              setAgregarCarrito={setAgregarCarrito}
-            />
-            <DetalleDelProducto
-              producto={clicado}
-              setClicado={setClicado}
-              setAgregarCarrito={setAgregarCarrito}
-            />
-          </div>
-        )}
-        <Footer className={clicado ? "ocultar-footer" : ""} />
-      </div>
+      {productosFiltrados.length === 0 ? (
+        <p className="NotFound">
+          <img src="/notFound.png" alt="NotFound" />
+          Lo sentimos, no hemos podido encontrar ningún resultado de{" "}
+          <span id="nombre">{nombre}</span>
+        </p>
+      ) : (
+        <div className={`contenido ${clicado ? "con-aside" : ""}`}>
+          <ListaProductos
+            productos={productosFiltrados}
+            setClicado={(producto) => {
+              setClicado(producto);
+              setCarritoVisible(false); // ← Cierra el carrito si abres un detalle
+            }}
+            setAgregarCarrito={setAgregarCarrito}
+          />
+          <DetalleDelProducto
+            producto={clicado}
+            setClicado={setClicado}
+            setAgregarCarrito={setAgregarCarrito}
+          />
+
+          <CarritoDeCompras
+            productosDelCarrito={productosDelCarrito}
+            carritoVisible={carritoVisible}
+            eliminarDelCarrito={eliminarDelCarrito}
+          />
+        </div>
+      )}
+      <Footer className={clicado ? "ocultar-footer" : ""} />
     </>
   );
 }

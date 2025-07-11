@@ -9,7 +9,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-  border-bottom: 1px solid var(--very-light-pink);
+  /* border-bottom: 1px solid var(--very-light-pink); */
   height: 60px;
 }
 
@@ -27,38 +27,33 @@ nav {
 .menu {
   width: 24px;
   height: 24px;
-  /* display: none; visible solo en móvil */
   cursor: pointer;
 }
 
-.navbar-categorias.active {
-  display: flex;
-}
-
-.navbar-categorias ul {
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* === CATEGORÍAS === */
 .navbar-categorias {
   position: absolute;
   top: 60px;
   left: 0;
   width: 100%;
   background: var(--white);
-  flex-direction: column;
-  display: none;
-  padding: 1rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.navbar-categorias.abierto {
+  max-height: 600px; /* ajusta según la altura de tu menú */
+  padding: 1rem;
 }
 
 .navbar-categorias ul {
   display: flex;
+  flex-direction: column;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 0 0 1rem 0;
 }
 
 .navbar-categorias li a {
@@ -72,6 +67,11 @@ nav {
 .navbar-categorias li a:hover {
   color: var(--hospital-green);
   border: 1px solid var(--hospital-green);
+}
+
+.mobile-menu ul li:nth-child(1) {
+  border-top: 1px solid var(--very-light-pink);
+  padding-top: 40px;
 }
 
 /* === CENTRO: Búsqueda === */
@@ -131,6 +131,7 @@ nav {
 
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 
 .navbar-shopping-cart div {
@@ -146,28 +147,28 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.mobile-menu ul li:last-child {
+  padding-top: 20px;
+
+  a {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+  }
+}
+
+.email {
+  font-size: var(--sm);
+  font-weight: 300;
+  padding: 8px 16px;
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .menu {
     display: block;
-  }
-
-  .navbar-categorias {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    flex-direction: column;
-    display: none;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar-categorias.active {
-    display: flex;
   }
 
   .navbar-categorias ul {

@@ -8,34 +8,32 @@ const DetalleDelProducto = ({ producto, setClicado, setAgregarCarrito }) => {
   if (producto === null) return;
 
   return (
-    <>
-      <aside className={`product-detail ${producto ? "abierto" : ""}`}>
-        <div className="product-detail-close" onClick={() => setClicado(null)}>
-          <img src={close} alt="close" />
-        </div>
-        <div className="imgContainer">
-          <img src={producto.imagen} alt={producto.nombre} />
-        </div>
+    <aside className={`product-detail ${producto ? "abierto" : ""}`}>
+      <div className="product-detail-close" onClick={() => setClicado(null)}>
+        <img src={close} alt="close" />
+      </div>
+      <div className="imgContainer">
+        <img src={producto.imagen} alt={producto.nombre} />
+      </div>
 
-        <div className="detalle-product-info">
-          <p>
-            {producto.marca} - {producto.nombre}
-          </p>
-          <p>⭐{producto.valoracion}</p>
+      <div className="detalle-product-info">
+        <p>
+          {producto.marca} - {producto.nombre}
+        </p>
+        <p>⭐{producto.valoracion}</p>
 
-          <p>{formatearPrecio(producto.precio)}</p>
+        <p>{formatearPrecio(producto.precio)}</p>
 
-          <p>{producto.descripcion}</p>
-          <button
-            className="primary-button add-to-cart-button"
-            onClick={() => setAgregarCarrito((prev) => prev + 1)}
-          >
-            <img src={carrito} alt="add to cart" />
-            Add to cart
-          </button>
-        </div>
-      </aside>
-    </>
+        <p>{producto.descripcion}</p>
+        <button
+          className="primary-button add-to-cart-button"
+          onClick={() => setAgregarCarrito((prev) => [...prev, producto])}
+        >
+          <img src={carrito} alt="add to cart" />
+          Add to cart
+        </button>
+      </div>
+    </aside>
   );
 };
 
