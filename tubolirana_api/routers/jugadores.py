@@ -3,6 +3,10 @@ from models.jugador import JugadorIn, JugadorDB, JugadorUpdate
 from db.client import db
 from bson import ObjectId
 from typing import Optional
+import random
+import httpx
+from utils.security import hash_password
+
 
 router = APIRouter(prefix="/jugadores", tags=["Jugadores"])
 
@@ -18,7 +22,35 @@ async def crear_jugador(jugador: JugadorIn):
 
     # Convertir a diccionario y guardar
     jugador_dict = jugador.model_dump()
+    # Hashea la contraseña antes de guardar:
+    jugador_dict["password"] = hash_password(jugador_dict["password"])
+
+    jugador_dict["puntuacion_total"] = 0
+
+    # Obtener avatar aleatorio de Rick & Morty
+    try:
+        async with httpx.AsyncClient() as client:
+            # a) Pedir total de personajes
+            r1 = await client.get("https://rickandmortyapi.com/api/character")
+            r1.raise_for_status()
+            total = r1.json()["info"]["count"]
+
+            # b) Escoger un ID al azar
+            rid = random.randint(1, total)
+
+            # c) Pedir datos de ese personaje
+            r2 = await client.get(f"https://rickandmortyapi.com/api/character/{rid}")
+            r2.raise_for_status()
+            p = r2.json()
+    except Exception:
+        # Fallback si la API externa cae
+        p = {"name": "Desconocido", "image": "/assets/icon/rana.webp"}
+
+    #Inyectar avatar en el documento
+    jugador_dict["avatar"] = {"nombre": p.get("name"), "imagen": p.get("image")}
+
     resultado = await db.jugadores.insert_one(jugador_dict)
+
     jugador_guardado = await db.jugadores.find_one({"_id": resultado.inserted_id})
 
     # Devolver el jugador guardado sin la contraseña
@@ -29,9 +61,13 @@ async def crear_jugador(jugador: JugadorIn):
 
 
 @router.get("/")
-async def listar_jugadores(username: Optional[str] = Query(None, description="Filtrar por username")):
+async def listar_jugadores(
+    username: Optional[str] = Query(None, description="Filtrar por username")
+):
     if username:
-        jugadores = await db.jugadores.find({"username": {"$regex": f"^{username}$", "$options": "i"}}).to_list(10)
+        jugadores = await db.jugadores.find(
+            {"username": {"$regex": f"^{username}$", "$options": "i"}}
+        ).to_list(10)
     else:
         jugadores = await db.jugadores.find().to_list(100)
 
@@ -52,10 +88,11 @@ async def obtener_jugador_por_id(id: str):
 
     if not jugador:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
-    
+
     jugador["_id"] = str(jugador["_id"])
     jugador.pop("password", None)  # Oculta la contraseña
     return jugador
+
 
 @router.put("/{id}")
 async def actualizar_jugador(id: str, datos: JugadorUpdate):
@@ -76,13 +113,15 @@ async def actualizar_jugador(id: str, datos: JugadorUpdate):
         if "username" in update_data:
             filtros.append({"username": update_data["username"]})
 
-        jugador_existente = await db.jugadores.find_one({
-            "$or": filtros,
-            "_id": {"$ne": ObjectId(id)}  # Solo si es otro jugador
-        })
+        jugador_existente = await db.jugadores.find_one(
+            {"$or": filtros, "_id": {"$ne": ObjectId(id)}}  # Solo si es otro jugador
+        )
 
         if jugador_existente:
-            raise HTTPException(status_code=400, detail="Email o username ya están en uso por otro jugador")
+            raise HTTPException(
+                status_code=400,
+                detail="Email o username ya están en uso por otro jugador",
+            )
 
     if update_data:
         await db.jugadores.update_one({"_id": ObjectId(id)}, {"$set": update_data})
@@ -91,7 +130,10 @@ async def actualizar_jugador(id: str, datos: JugadorUpdate):
         jugador_actualizado.pop("password", None)
         return jugador_actualizado
     else:
-        raise HTTPException(status_code=400, detail="No se proporcionaron campos para actualizar")
+        raise HTTPException(
+            status_code=400, detail="No se proporcionaron campos para actualizar"
+        )
+
 
 @router.delete("/{id}", status_code=204)
 async def eliminar_jugador(id: str):
