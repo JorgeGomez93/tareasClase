@@ -1,0 +1,88 @@
+/* SideNav.css */
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 90px; /* Ancho de la barra colapsada */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  border-right: 1px solid #333;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+.side-nav:hover {
+  width: 220px; /* Ancho de la barra expandida */
+}
+
+.sidenav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ocupa toda la altura de la barra */
+  gap: 15px; /* Espacio entre íconos */
+}
+
+/* Estilo unificado para todos los botones/links */
+.icon-button {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre icono y texto */
+  padding: 10px 25px; /* Alinea el icono al centro (90px - 40px) / 2 */
+  color: #ccc;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.icon-button:hover {
+  background-color: #333;
+}
+
+.icon-button img {
+  width: 40px;
+  height: 40px;
+  filter: invert(0.8);
+  object-fit: cover;
+  /*border-radius: 50%;  Hace todos los iconos redondos */
+}
+
+.icon-button span {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-size: 1.6rem;
+}
+
+.side-nav:hover .icon-button span {
+  opacity: 1;
+}
+
+/* Elementos para la distribución */
+.divider {
+  height: 1px;
+  min-height: 1px;
+  background-color: #444;
+  margin: 5px 15px;
+}
+
+.spacer {
+  flex-grow: 1; /* Empuja el botón de salir hacia abajo */
+}
+
+/* Asegura que el avatar mantenga su color original */
+.icon-button img[alt="Perfil"] {
+  filter: none;
+  width: 50px;
+  height: 50px;
+}

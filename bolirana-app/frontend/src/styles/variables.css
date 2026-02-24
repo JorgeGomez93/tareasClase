@@ -1,0 +1,11 @@
+/* ===================================
+  VARIABLES CSS GLOBALESvariables.css
+  Archivo: variables.css
+  =================================== */
+:root {
+  /* Color principal esmeralda brillante usado en títulos, bordes, efectos */
+  --color-primario: #00ff99;
+
+  /* Color secundario plateado suave usado para texto, íconos y enlaces */
+  --color-secundario: #cccccc;
+}

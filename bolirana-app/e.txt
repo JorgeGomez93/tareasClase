@@ -1,0 +1,18 @@
+PS C:\Users\jorge\Escritorio\WebDev\tareasClase\bolirana-app\frontend> npm run build
+
+> frontend-react@0.0.0 build
+> vite build
+
+vite v7.1.5 building for production...
+
+../assets/fonts/AE01014D.TTF referenced in ../assets/fonts/AE01014D.TTF didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../assets/fonts/DS-DIGI.TTF referenced in ../assets/fonts/DS-DIGI.TTF didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 74 modules transformed.
+dist/index.html                   0.48 kB │ gzip:  0.31 kB
+dist/assets/rana-QLWEe3R-.webp    9.81 kB
+dist/assets/index-CWWJ0YG3.css   14.70 kB │ gzip:  3.77 kB
+dist/assets/index-wKn3tAHz.js   241.80 kB │ gzip: 76.97 kB
+✓ built in 1.97s
+PS C:\Users\jorge\Escritorio\WebDev\tareasClase\bolirana-app\frontend> 
+
